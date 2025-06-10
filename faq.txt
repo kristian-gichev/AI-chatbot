@@ -1,0 +1,29 @@
+What are your working hours?
+Our office is open from 9 AM to 6 PM, Monday through Friday.
+
+How do I reset my password?
+Go to the login page and click on 'Forgot password'. Follow the instructions sent to your email.
+
+What services do you offer?
+We specialize in AI software development, cloud solutions, and data engineering.
+
+How can I contact support?
+You can contact support via email at support@example.com or call us at +123456789.
+
+Where is your company located?
+Our headquarters are located in Sofia, Bulgaria.
+
+Do you offer remote work opportunities?
+Yes, we offer flexible remote work options depending on the project.
+
+What programming languages do you use?
+We primarily use Python, JavaScript, and C# in our projects.
+
+Can I request a demo of your AI tools?
+Yes, please contact our sales team to schedule a demo session.
+
+How do you handle data privacy?
+We comply with GDPR regulations and ensure all client data is securely handled.
+
+Do you provide training for your software?
+Yes, we offer training sessions and detailed documentation for our clients.
