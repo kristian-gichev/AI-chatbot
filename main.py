@@ -18,11 +18,13 @@ faq_sections = [section.strip() for section in faq_text.split("\n\n") if section
 tfidf_vectorizer = TfidfVectorizer()
 faq_embeddings = tfidf_vectorizer.fit_transform(faq_sections)
 
+
 def find_most_relevant_section(query, faq_sections, faq_embeddings):
     query_embedding = tfidf_vectorizer.transform([query])
     similarities = cosine_similarity(query_embedding, faq_embeddings)[0]
     best_match_idx = np.argmax(similarities)
     return faq_sections[best_match_idx]
+
 
 def ask_gpt(context, question):
     prompt = f"Context: {context}\n\nQuestion: {question}\nAnswer:"
@@ -33,6 +35,7 @@ def ask_gpt(context, question):
         max_tokens=200
     )
     return response.choices[0].message.content.strip()
+
 
 # Streamlit UI
 st.title("📚 Smart FAQ Chatbot")
