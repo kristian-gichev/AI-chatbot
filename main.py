@@ -39,7 +39,7 @@ def ask_gpt(context, question):
 
 # Streamlit UI
 st.title("📚 Smart FAQ Chatbot")
-st.write("Ask a question about our FAQ and get an instant answer.")
+st.write("Ask a question about our Software Development Business and get an instant answer.")
 
 user_question = st.text_input("Enter your question:")
 
