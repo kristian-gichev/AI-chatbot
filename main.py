@@ -4,9 +4,9 @@ import os
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
+from dotenv import load_dotenv
 
-# Set your OpenAI API key here
-openai.api_key = os.getenv("OPENAI_API_KEY")
+load_dotenv()  # loads environment variables from .env
 
 # Load your custom FAQ
 with open("faq.txt", "r", encoding="utf-8") as f:
@@ -28,11 +28,11 @@ def find_most_relevant_section(query, faq_sections, faq_embeddings):
 
 def ask_gpt(context, question):
     prompt = f"Context: {context}\n\nQuestion: {question}\nAnswer:"
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+    response = openai.chat.completions.create(
+        model="gpt-4o-mini",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.2,
-        max_tokens=200
+        max_tokens=200,
     )
     return response.choices[0].message.content.strip()
 
