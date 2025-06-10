@@ -1,3 +1,4 @@
 /.idea
 .idea/AI-Chatbot.iml
 /venv
+.env
